@@ -1,2 +1,3 @@
-# configs
-What are you looking at
+This is where I dump all my stupid configs.
+
+Get out
