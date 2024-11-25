@@ -1,0 +1,7 @@
+# .clang-format
+BasedOnStyle: Google  # Or another style as baseline
+IndentWidth: 4
+TabWidth: 4
+ColumnLimit: 100
+UseTab: Never        # Set to Always if you want tabs instead of spaces
+
