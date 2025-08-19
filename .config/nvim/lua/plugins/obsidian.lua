@@ -24,11 +24,16 @@ return {
 			time_format = "%H:%M",
 		},
 
-		-- 👇 this ensures frontmatter always has a date
 		note_frontmatter_func = function(note)
+			local slug = note.title
+			if slug then
+				-- replace spaces with dashes, lowercase it
+				slug = slug:gsub("%s+", "-"):lower()
+			end
+
 			local out = {
 				id = note.id,
-				aliases = note.aliases,
+				aliases = slug,
 				tags = note.tags,
 				date = os.date("%d-%m-%Y %H:%M"), -- matches your template format
 			}
